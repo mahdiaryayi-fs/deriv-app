@@ -373,7 +373,8 @@ html {
   font-weight: bold;
   text-decoration: none; }
   .link:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
   .link--white {
     color: #ffffff; }
 
@@ -519,9 +520,6 @@ html {
         margin-bottom: 0;
         margin-right: 0;
         min-width: 6.4em; }
-        .account-form__footer-btn .btn__icon {
-          line-height: 0;
-          padding: 0; }
   .account__intial-loader {
     height: calc(100vh - 240px); }
   .account__text {
