@@ -4,6 +4,8 @@
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -42,11 +44,11 @@
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -65,7 +67,7 @@
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -91,11 +93,11 @@
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -114,7 +116,7 @@
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -264,11 +266,11 @@
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -287,7 +289,7 @@
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -314,11 +316,11 @@
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -337,7 +339,371 @@
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-themed-scrollbars__track--horizontal {
+  height: 6px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__track--vertical {
+  width: 6px;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__thumb--horizontal {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+.dc-themed-scrollbars__thumb--vertical {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+/*------------------------------------*
+ *  # Constants
+ *------------------------------------*/
+/* stylelint-disable color-no-hex */
+/* COLOR PALETTE */
+/* colors */
+/* alpha colors */
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+  :root .theme--light {
+    --general-main-1: #ffffff;
+    --general-main-2: #ffffff;
+    --general-section-1: #f2f3f4;
+    --general-section-2: #f2f3f4;
+    --general-disabled: #eaeced;
+    --general-hover: #e6e9e9;
+    --general-active: #d6dadb;
+    --text-prominent: #333333;
+    --text-general: #333333;
+    --text-less-prominent: #999999;
+    --text-disabled: #d6d6d6;
+    --text-profit-success: #4bb4b3;
+    --text-loss-danger: #ec3f3f;
+    --text-colored-background: #ffffff;
+    --purchase-main-1: #4bb4b3;
+    --purchase-section-1: #3d9494;
+    --purchase-main-2: #ec3f3f;
+    --purchase-section-2: #d33636;
+    --purchase-disabled-main: #eaeced;
+    --purchase-disabled-section: #e6e9e9;
+    --button-primary-default: var(--brand-red-coral);
+    --button-secondary-default: #999999;
+    --button-tertiary-default: transparent;
+    --button-primary-hover: #eb3e48;
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
+    --state-normal: #ffffff;
+    --state-hover: #e6e9e9;
+    --state-active: #d6dadb;
+    --state-disabled: #eaeced;
+    --border-normal: #d6dadb;
+    --border-hover: #999999;
+    --border-active: var(--brand-secondary);
+    --border-disabled: #eaeced;
+    --fill-normal: #ffffff;
+    --fill-hover: #999999;
+    --fill-active: var(--brand-secondary);
+    --fill-disabled: #eaeced;
+    --status-default: #eaeced;
+    --status-danger: #ec3f3f;
+    --status-success: #4bb4b3;
+    --status-warning: #ffad3a;
+    --status-info: #377cfc;
+    --status-colored-background: #ffffff;
+    --transparent-success: rgba(75, 180, 179, 0.92); }
+  :root .theme--dark {
+    --general-main-1: #0e0e0e;
+    --general-main-2: #151717;
+    --general-section-1: #151717;
+    --general-section-2: #0e0e0e;
+    --general-disabled: #1d1f20;
+    --general-hover: #242828;
+    --general-active: #323738;
+    --text-prominent: #ffffff;
+    --text-general: #c2c2c2;
+    --text-less-prominent: #6e6e6e;
+    --text-disabled: #3e3e3e;
+    --text-profit-success: #00a79e;
+    --text-loss-danger: #cc2e3d;
+    --text-colored-background: #ffffff;
+    --purchase-main-1: #00a79e;
+    --purchase-section-1: #008079;
+    --purchase-main-2: #cc2e3d;
+    --purchase-section-2: #a32430;
+    --purchase-disabled-main: #1d1f20;
+    --purchase-disabled-section: #0e0e0e;
+    --button-primary-default: var(--brand-red-coral);
+    --button-secondary-default: #6e6e6e;
+    --button-tertiary-default: transparent;
+    --button-primary-hover: #eb3e48;
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
+    --state-normal: #0e0e0e;
+    --state-hover: #242828;
+    --state-active: #323738;
+    --state-disabled: #1d1f20;
+    --border-normal: #323738;
+    --border-hover: #6e6e6e;
+    --border-active: var(--brand-secondary);
+    --border-disabled: #1d1f20;
+    --fill-normal: #0e0e0e;
+    --fill-hover: #6e6e6e;
+    --fill-active: var(--brand-secondary);
+    --fill-disabled: #1d1f20;
+    --status-default: #eaeced;
+    --status-danger: #cc2e3d;
+    --status-warning: #ffad3a;
+    --status-success: #00a79e;
+    --status-info: #377cfc;
+    --status-colored-background: #ffffff;
+    --transparent-success: rgba(0, 167, 158, 0.92); }
+
+/* Preserve legacy variables */
+/* Primary */
+/* stylelint-enable color-no-hex */
+/*------------------------------------*
+ *  # SASS Mixins and Functions
+ *------------------------------------*/
+/*
+ * SASS interpolation
+ */
+/*
+ * PX to EM
+ * @param $px - px value to be converted
+ * @param $base - base font size (in `em`)
+ * Note: 'em' values are calculate based on the element font-size
+ *       to properly converts 'px' to 'em', please pass in the element font-size with it
+ * Usage example:
+    padding: em(16px, 1.6em); // font-size in 'em'
+ */
+/*
+ * Set property by passing a property name, and values.
+ * @param $property name - padding, margin etc.
+ * @param $values        - values in `px` (space separated for multiple values)
+ * @param $font-size     - base font-size in `em`
+ * Usage example:
+   @include toEm(padding, 8px 16px 8px, 1.6em);
+ */
+/*
+ * Generate typefaces key-value pair of variable name and config
+ * Example:
+   --paragraph-center-bold-black: (14px, center, bold, black)
+ */
+/*
+ * Sets font-size, font-weight, color, text-transform, text-align and line-height
+ * Usage example:
+   @include setTypeface(16px, bold, black, uppercase);
+ */
+/*
+ * Set typefaces by passing a typeface variable name
+ * @param $var   - typeface variable
+ * @param $tt    - text-transform property
+ * @param $align - text-align property
+ * Usage example:
+   @include typeface(--paragraph-bold-black, uppercase, center);
+ */
+/*
+ * Range Slider Thumb styling is set here
+ */
+/*
+ * SVG icons colors
+ */
+/*
+ * Bar Spinner Animation
+ * @param $count    - number of bars
+ * @param $duration - duration of animation
+ * @param $phase    - each bar phase change delay
+ * Usage example:
+   @include createBarspinnerAnimation(5, 1.2s, 0,1);
+ */
+/*
+ * Implementation of themes
+ * generate sets of themes keys object property (dark / light)
+ * @param $themes - themes property
+ * Usage example:
+   @include themify($themes) { color: themed('background_color') }
+ */
+/*
+ * Generate typefaces key-value pair of themefy object
+ * Should be inside themify mixins
+ * Example:
+   @include themify($themes) { border-color: 1px solid themed('background_color') }
+ */
+/*
+ * Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
+/*
+ * Themified Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
+/*
+ * Convert Tooltip colors
+ * @param $color - css color property
+ * Usage example:
+   @include convertTooltipColor(var(--status-default));
+ */
+/*
+    Constants
+*/
+/*
+    Variables
+*/
+/*
+    List of all typefaces variables in the format: --$FONT_SIZES-$TEXT_ALIGN-$FONT_WEIGHTS-COLORS.
+    See $FONT_SIZES, $TEXT_ALIGN, $FONT_WEIGHTS, $COLORS maps above for references.
+    Variables name example: --title-center-semibold-red
+ */
+/*
+    to use styles without modifier class on .inline-icon
+    use @extend
+
+    e.g. style icon on parent hover:
+        a:hover .inline-icon {
+            @extend %inline-icon.active;
+        }
+*/
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-popover__target__icon--disabled .info .color1-fill {
   fill: var(--text-disabled); }
@@ -455,6 +821,8 @@
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -493,11 +861,11 @@
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -516,7 +884,7 @@
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -542,11 +910,11 @@
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -565,7 +933,7 @@
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -715,11 +1083,11 @@
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -738,7 +1106,7 @@
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -765,11 +1133,11 @@
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -788,7 +1156,7 @@
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-modal-header__close .color1-fill {
   fill: var(--text-prominent); }
@@ -797,13 +1165,17 @@
   stroke: var(--text-prominent); }
 
 .dc-modal__container {
+  display: flex;
+  flex-direction: column;
   min-width: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
   transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.1, 0.25), opacity 0.25s cubic-bezier(0.25, 0.1, 0.1, 0.25);
   background-color: var(--general-main-2);
-  box-shadow: 0 4px 6px 0 var(--shadow-menu); }
+  box-shadow: 0 4px 6px 0 var(--shadow-menu);
+  max-height: calc(100vh - 48px - 36px);
+  max-width: 90vw; }
 
 .dc-modal__container--hide {
   display: none; }
@@ -854,6 +1226,8 @@
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -892,11 +1266,11 @@
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -915,7 +1289,7 @@
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -941,11 +1315,11 @@
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -964,7 +1338,7 @@
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -1298,6 +1672,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -1336,11 +1712,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -1359,7 +1735,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -1385,11 +1761,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -1408,7 +1784,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -1558,11 +1934,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -1581,7 +1957,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -1608,11 +1984,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -1631,7 +2007,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-field-error {
   position: absolute;
@@ -1683,11 +2059,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -1706,7 +2082,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -1733,11 +2109,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -1756,7 +2132,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-input {
   position: relative;
@@ -1922,6 +2298,12 @@ html {
 .dc-input__trailing-icon {
   margin: 0 1.2rem 0 0 !important; }
 
+.dc-input__trailing-icon .color1-fill {
+  fill: var(--text-less-prominent); }
+
+.dc-input__trailing-icon .color1-stroke {
+  fill: var(--text-less-prominent); }
+
 .dc-input__label {
   color: var(--text-less-prominent);
   font-size: 1.4rem;
@@ -2002,11 +2384,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -2025,7 +2407,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -2052,11 +2434,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -2075,7 +2457,143 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-themed-scrollbars__track--horizontal {
+  height: 6px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__track--vertical {
+  width: 6px;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__thumb--horizontal {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+.dc-themed-scrollbars__thumb--vertical {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-dropdown-list {
   position: absolute;
@@ -2147,11 +2665,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -2170,7 +2688,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -2197,11 +2715,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -2220,7 +2738,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-autocomplete {
   width: 100%;
@@ -2267,6 +2785,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -2305,11 +2825,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -2328,7 +2848,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -2354,11 +2874,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -2377,7 +2897,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -2527,11 +3047,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -2550,7 +3070,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -2577,11 +3097,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -2600,7 +3120,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-checkbox {
   display: flex;
@@ -2642,6 +3162,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -2680,11 +3202,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -2703,7 +3225,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -2729,11 +3251,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -2752,7 +3274,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -2902,11 +3424,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -2925,7 +3447,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -2952,11 +3474,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -2975,7 +3497,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .barspinner {
   margin: auto;
@@ -3097,11 +3619,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -3120,7 +3642,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -3147,11 +3669,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -3170,7 +3692,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .btn {
   font-size: 1rem;
@@ -3454,6 +3976,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -3492,11 +4016,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -3515,7 +4039,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -3541,11 +4065,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -3564,7 +4088,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -3714,11 +4238,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -3737,7 +4261,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -3764,11 +4288,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -3787,7 +4311,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-field-error {
   position: absolute;
@@ -3839,11 +4363,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -3862,7 +4386,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -3889,11 +4413,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -3912,7 +4436,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-input {
   position: relative;
@@ -4078,6 +4602,12 @@ html {
 .dc-input__trailing-icon {
   margin: 0 1.2rem 0 0 !important; }
 
+.dc-input__trailing-icon .color1-fill {
+  fill: var(--text-less-prominent); }
+
+.dc-input__trailing-icon .color1-stroke {
+  fill: var(--text-less-prominent); }
+
 .dc-input__label {
   color: var(--text-less-prominent);
   font-size: 1.4rem;
@@ -4124,6 +4654,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -4162,11 +4694,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -4185,7 +4717,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -4211,11 +4743,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -4234,7 +4766,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -4512,6 +5044,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -4550,11 +5084,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -4573,7 +5107,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -4599,11 +5133,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -4622,7 +5156,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -4772,11 +5306,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -4795,7 +5329,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -4822,11 +5356,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -4845,7 +5379,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-dropdown__select-arrow .color1-fill {
   fill: var(--text-general); }
@@ -5166,11 +5700,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -5189,7 +5723,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -5216,11 +5750,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -5239,7 +5773,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-list {
   position: absolute;
@@ -5389,11 +5923,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -5412,7 +5946,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -5439,11 +5973,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -5462,7 +5996,143 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-themed-scrollbars__track--horizontal {
+  height: 6px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__track--vertical {
+  width: 6px;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 3px; }
+
+.dc-themed-scrollbars__thumb--horizontal {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+.dc-themed-scrollbars__thumb--vertical {
+  border-radius: inherit;
+  background-color: var(--state-active); }
+
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-popover__target__icon--disabled .info .color1-fill {
   fill: var(--text-disabled); }
@@ -5580,6 +6250,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -5618,11 +6290,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -5641,7 +6313,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -5667,11 +6339,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -5690,7 +6362,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -5840,11 +6512,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -5863,7 +6535,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -5890,11 +6562,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -5913,7 +6585,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-file-dropzone {
   width: 100%;
@@ -6002,6 +6674,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -6040,11 +6714,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -6063,7 +6737,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -6089,11 +6763,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -6112,7 +6786,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -6262,11 +6936,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -6285,7 +6959,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -6312,11 +6986,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -6335,7 +7009,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-field-error {
   position: absolute;
@@ -6387,11 +7061,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -6410,7 +7084,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -6437,11 +7111,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -6460,56 +7134,343 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
-.dc-password-meter {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  height: 5px;
-  border-radius: 0 0 4px 4px;
-  transition: transform 0.25s linear;
-  background: var(--status-danger);
-  transform-origin: left top;
+.dc-input {
+  position: relative;
   width: 100%;
-  z-index: 2; }
+  border-radius: 4px;
+  border: 1px solid var(--border-normal);
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.2rem; }
 
-.dc-password-meter__bg {
-  z-index: 1;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  height: 5px;
-  border-radius: 0 0 4px 4px;
+.dc-input:hover:not(.dc-input__disabled) {
+  border-color: var(--border-hover); }
+
+.dc-input[focus-within] {
+  border-color: #85acb0;
+  border-color: var(--brand-secondary); }
+
+.dc-input:focus-within {
+  border-color: #85acb0;
+  border-color: var(--brand-secondary); }
+
+.dc-input[focus-within]:hover {
+  border-color: #85acb0;
+  border-color: var(--brand-secondary); }
+
+.dc-input:focus-within:hover {
+  border-color: #85acb0;
+  border-color: var(--brand-secondary); }
+
+.dc-input__disabled {
+  border-color: var(--general-disabled);
+  color: var(--text-disabled); }
+
+.dc-input__field {
+  background: none;
+  color: var(--text-prominent);
+  font-size: 1.4rem;
+  font-size: var(--text-size-xs);
+  padding: 1rem 1.2rem;
   width: 100%;
-  background: var(--general-section-1); }
+  height: 3.8rem;
+  display: block; }
 
-.dc-password-meter__container {
-  position: relative; }
+.dc-input__field::-webkit-input-placeholder {
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.25s; }
 
-.dc-password-meter__container .dc-input {
-  border-radius: 4px 4px 0 0; }
+.dc-input__field::-moz-placeholder {
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.25s; }
 
-.dc-password-meter__error, .dc-password-meter__warning {
-  top: 5rem;
-  z-index: 2; }
+.dc-input__field:-ms-input-placeholder {
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.25s; }
 
-.dc-password-meter__warning {
-  color: var(--status-warning); }
+.dc-input__field::-ms-input-placeholder {
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.25s; }
 
-.dc-password-meter--weak {
-  background-color: var(--status-danger);
-  z-index: 2; }
+.dc-input__field::placeholder {
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.25s; }
 
-.dc-password-meter--strong {
-  background-color: var(--status-success);
-  z-index: 2; }
+.dc-input__field--placeholder-visible::-webkit-input-placeholder {
+  opacity: 0.2; }
+
+.dc-input__field--placeholder-visible::-moz-placeholder {
+  opacity: 0.2; }
+
+.dc-input__field--placeholder-visible:-ms-input-placeholder {
+  opacity: 0.2; }
+
+.dc-input__field--placeholder-visible::-ms-input-placeholder {
+  opacity: 0.2; }
+
+.dc-input__field--placeholder-visible::placeholder {
+  opacity: 0.2; }
+
+.dc-input__field:focus, .dc-input__field:disabled, .dc-input__field:not(:focus):not([value='']) {
+  outline: none; }
+
+.dc-input__field:focus ~ label, .dc-input__field:disabled ~ label, .dc-input__field:not(:focus):not([value='']) ~ label {
+  transform: translate(0, -1.8rem) scale(0.75);
+  padding: 0 4px; }
+
+.dc-input__field:disabled {
+  color: var(--text-disabled); }
+
+.dc-input__field:disabled ~ label {
+  color: var(--text-disabled); }
+
+.dc-input__field:disabled ~ svg .color1-fill {
+  fill: var(--text-disabled); }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .dc-input__field:disabled {
+      color: var(--text-prominent); } } }
+
+.dc-input__field:focus {
+  outline: none; }
+
+.dc-input__field:focus ~ label {
+  color: #85acb0;
+  color: var(--brand-secondary); }
+
+.dc-input__field:focus::-webkit-input-placeholder {
+  opacity: 0.4; }
+
+.dc-input__field:focus::-moz-placeholder {
+  opacity: 0.4; }
+
+.dc-input__field:focus:-ms-input-placeholder {
+  opacity: 0.4; }
+
+.dc-input__field:focus::-ms-input-placeholder {
+  opacity: 0.4; }
+
+.dc-input__field:focus::placeholder {
+  opacity: 0.4; }
+
+.dc-input__field:not(.dc-input--no-placeholder):not(:focus):not([value='']) ~ label {
+  color: var(--text-general); }
+
+.dc-input__field[type=number]::-webkit-inner-spin-button, .dc-input__field[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.dc-input__field[type=textarea] {
+  height: 9.6rem;
+  border: none;
+  resize: none; }
+
+.dc-input__field[type=textarea] ~ .dc-field-error {
+  top: 10rem; }
+
+.dc-input__field:-webkit-autofill {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 30px var(--fill-normal) inset !important;
+  -webkit-text-fill-color: var(--text-prominent) !important; }
+
+.dc-input__field:-webkit-autofill:hover, .dc-input__field:-webkit-autofill:focus, .dc-input__field:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--fill-normal) inset !important; }
+
+.dc-input__leading-icon {
+  margin-left: 1rem;
+  top: 1rem;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  cursor: text;
+  font-size: 1.4rem;
+  font-size: var(--text-size-xs); }
+
+.dc-input__leading-icon + .dc-input__field {
+  padding-left: calc(1.6rem + 6px); }
+
+.dc-input__trailing-icon {
+  margin: 0 1.2rem 0 0 !important; }
+
+.dc-input__trailing-icon .color1-fill {
+  fill: var(--text-less-prominent); }
+
+.dc-input__trailing-icon .color1-stroke {
+  fill: var(--text-less-prominent); }
+
+.dc-input__label {
+  color: var(--text-less-prominent);
+  font-size: 1.4rem;
+  font-size: var(--text-size-xs);
+  background-color: var(--fill-normal);
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  top: 0.9rem;
+  transition: 0.25s ease all;
+  transform-origin: top left; }
+
+.dc-input:not(.dc-input--no-placeholder)__label {
+  color: var(--text-general);
+  transition: 0.25s ease all;
+  transform: translateZ(0); }
+
+.dc-input__hint {
+  color: var(--text-less-prominent);
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  position: absolute;
+  top: 4rem; }
+
+.dc-input--no-placeholder label {
+  transform: translate(0, -1.8rem) scale(0.75);
+  color: var(--text-less-prominent);
+  padding: 0 4px;
+  background-color: var(--fill-normal); }
+
+.dc-input--error {
+  border-color: #ff444f !important;
+  border-color: var(--brand-red-coral) !important; }
+
+.dc-input--error label {
+  color: #ff444f !important;
+  color: var(--brand-red-coral) !important; }
+
+.dc-input__error {
+  color: var(--text-loss-danger); }
+
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-password-input__visibility-icon {
+  cursor: pointer; }
 
 /*------------------------------------*
  *  # Constants
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -6548,11 +7509,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -6571,7 +7532,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -6597,11 +7558,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -6620,7 +7581,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -6770,11 +7731,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -6793,7 +7754,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -6820,11 +7781,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -6843,7 +7804,517 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-field-error {
+  position: absolute;
+  top: 4rem;
+  text-align: left !important;
+  padding-top: 0.4rem;
+  padding-left: 0.4rem;
+  color: #ff444f;
+  color: var(--brand-red-coral);
+  font-size: 1.2rem;
+  font-size: var(--text-size-xxs); }
+
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
+
+.dc-password-meter {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 5px;
+  border-radius: 0 0 4px 4px;
+  transition: transform 0.25s linear;
+  background: var(--status-danger);
+  transform-origin: left top;
+  width: 100%;
+  z-index: 2; }
+
+.dc-password-meter__bg {
+  z-index: 1;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 5px;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  background: var(--general-section-1); }
+
+.dc-password-meter__container {
+  position: relative; }
+
+.dc-password-meter__container .dc-input {
+  border-radius: 4px 4px 0 0; }
+
+.dc-password-meter__error, .dc-password-meter__warning {
+  top: 5rem;
+  z-index: 2; }
+
+.dc-password-meter__warning {
+  color: var(--status-warning); }
+
+.dc-password-meter--weak {
+  background-color: var(--status-danger);
+  z-index: 2; }
+
+.dc-password-meter--strong {
+  background-color: var(--status-success);
+  z-index: 2; }
+
+/*------------------------------------*
+ *  # Constants
+ *------------------------------------*/
+/* stylelint-disable color-no-hex */
+/* COLOR PALETTE */
+/* colors */
+/* alpha colors */
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+  :root .theme--light {
+    --general-main-1: #ffffff;
+    --general-main-2: #ffffff;
+    --general-section-1: #f2f3f4;
+    --general-section-2: #f2f3f4;
+    --general-disabled: #eaeced;
+    --general-hover: #e6e9e9;
+    --general-active: #d6dadb;
+    --text-prominent: #333333;
+    --text-general: #333333;
+    --text-less-prominent: #999999;
+    --text-disabled: #d6d6d6;
+    --text-profit-success: #4bb4b3;
+    --text-loss-danger: #ec3f3f;
+    --text-colored-background: #ffffff;
+    --purchase-main-1: #4bb4b3;
+    --purchase-section-1: #3d9494;
+    --purchase-main-2: #ec3f3f;
+    --purchase-section-2: #d33636;
+    --purchase-disabled-main: #eaeced;
+    --purchase-disabled-section: #e6e9e9;
+    --button-primary-default: var(--brand-red-coral);
+    --button-secondary-default: #999999;
+    --button-tertiary-default: transparent;
+    --button-primary-hover: #eb3e48;
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
+    --state-normal: #ffffff;
+    --state-hover: #e6e9e9;
+    --state-active: #d6dadb;
+    --state-disabled: #eaeced;
+    --border-normal: #d6dadb;
+    --border-hover: #999999;
+    --border-active: var(--brand-secondary);
+    --border-disabled: #eaeced;
+    --fill-normal: #ffffff;
+    --fill-hover: #999999;
+    --fill-active: var(--brand-secondary);
+    --fill-disabled: #eaeced;
+    --status-default: #eaeced;
+    --status-danger: #ec3f3f;
+    --status-success: #4bb4b3;
+    --status-warning: #ffad3a;
+    --status-info: #377cfc;
+    --status-colored-background: #ffffff;
+    --transparent-success: rgba(75, 180, 179, 0.92); }
+  :root .theme--dark {
+    --general-main-1: #0e0e0e;
+    --general-main-2: #151717;
+    --general-section-1: #151717;
+    --general-section-2: #0e0e0e;
+    --general-disabled: #1d1f20;
+    --general-hover: #242828;
+    --general-active: #323738;
+    --text-prominent: #ffffff;
+    --text-general: #c2c2c2;
+    --text-less-prominent: #6e6e6e;
+    --text-disabled: #3e3e3e;
+    --text-profit-success: #00a79e;
+    --text-loss-danger: #cc2e3d;
+    --text-colored-background: #ffffff;
+    --purchase-main-1: #00a79e;
+    --purchase-section-1: #008079;
+    --purchase-main-2: #cc2e3d;
+    --purchase-section-2: #a32430;
+    --purchase-disabled-main: #1d1f20;
+    --purchase-disabled-section: #0e0e0e;
+    --button-primary-default: var(--brand-red-coral);
+    --button-secondary-default: #6e6e6e;
+    --button-tertiary-default: transparent;
+    --button-primary-hover: #eb3e48;
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
+    --state-normal: #0e0e0e;
+    --state-hover: #242828;
+    --state-active: #323738;
+    --state-disabled: #1d1f20;
+    --border-normal: #323738;
+    --border-hover: #6e6e6e;
+    --border-active: var(--brand-secondary);
+    --border-disabled: #1d1f20;
+    --fill-normal: #0e0e0e;
+    --fill-hover: #6e6e6e;
+    --fill-active: var(--brand-secondary);
+    --fill-disabled: #1d1f20;
+    --status-default: #eaeced;
+    --status-danger: #cc2e3d;
+    --status-warning: #ffad3a;
+    --status-success: #00a79e;
+    --status-info: #377cfc;
+    --status-colored-background: #ffffff;
+    --transparent-success: rgba(0, 167, 158, 0.92); }
+
+/* Preserve legacy variables */
+/* Primary */
+/* stylelint-enable color-no-hex */
+/*------------------------------------*
+ *  # SASS Mixins and Functions
+ *------------------------------------*/
+/*
+ * SASS interpolation
+ */
+/*
+ * PX to EM
+ * @param $px - px value to be converted
+ * @param $base - base font size (in `em`)
+ * Note: 'em' values are calculate based on the element font-size
+ *       to properly converts 'px' to 'em', please pass in the element font-size with it
+ * Usage example:
+    padding: em(16px, 1.6em); // font-size in 'em'
+ */
+/*
+ * Set property by passing a property name, and values.
+ * @param $property name - padding, margin etc.
+ * @param $values        - values in `px` (space separated for multiple values)
+ * @param $font-size     - base font-size in `em`
+ * Usage example:
+   @include toEm(padding, 8px 16px 8px, 1.6em);
+ */
+/*
+ * Generate typefaces key-value pair of variable name and config
+ * Example:
+   --paragraph-center-bold-black: (14px, center, bold, black)
+ */
+/*
+ * Sets font-size, font-weight, color, text-transform, text-align and line-height
+ * Usage example:
+   @include setTypeface(16px, bold, black, uppercase);
+ */
+/*
+ * Set typefaces by passing a typeface variable name
+ * @param $var   - typeface variable
+ * @param $tt    - text-transform property
+ * @param $align - text-align property
+ * Usage example:
+   @include typeface(--paragraph-bold-black, uppercase, center);
+ */
+/*
+ * Range Slider Thumb styling is set here
+ */
+/*
+ * SVG icons colors
+ */
+/*
+ * Bar Spinner Animation
+ * @param $count    - number of bars
+ * @param $duration - duration of animation
+ * @param $phase    - each bar phase change delay
+ * Usage example:
+   @include createBarspinnerAnimation(5, 1.2s, 0,1);
+ */
+/*
+ * Implementation of themes
+ * generate sets of themes keys object property (dark / light)
+ * @param $themes - themes property
+ * Usage example:
+   @include themify($themes) { color: themed('background_color') }
+ */
+/*
+ * Generate typefaces key-value pair of themefy object
+ * Should be inside themify mixins
+ * Example:
+   @include themify($themes) { border-color: 1px solid themed('background_color') }
+ */
+/*
+ * Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
+/*
+ * Themified Tooltip colors
+ * @param $color - color property
+ * Usage example:
+   @include tooltipColor($COLOR_RED);
+ */
+/*
+ * Convert Tooltip colors
+ * @param $color - css color property
+ * Usage example:
+   @include convertTooltipColor(var(--status-default));
+ */
+/*
+    Constants
+*/
+/*
+    Variables
+*/
+/*
+    List of all typefaces variables in the format: --$FONT_SIZES-$TEXT_ALIGN-$FONT_WEIGHTS-COLORS.
+    See $FONT_SIZES, $TEXT_ALIGN, $FONT_WEIGHTS, $COLORS maps above for references.
+    Variables name example: --title-center-semibold-red
+ */
+/*
+    to use styles without modifier class on .inline-icon
+    use @extend
+
+    e.g. style icon on parent hover:
+        a:hover .inline-icon {
+            @extend %inline-icon.active;
+        }
+*/
+:root {
+  --text-size-xxs: 1.2rem;
+  --text-size-xs: 1.4rem;
+  --text-size-s: 1.6rem;
+  --text-size-sm: 2rem;
+  --text-size-m: 2.4rem;
+  --text-size-l: 3.2rem;
+  --text-size-xl: 4.8rem;
+  --text-size-xxl: 6.4rem;
+  --brand-dark-grey: #0e0e0e;
+  --brand-red-coral: #ff444f;
+  --brand-orange: #ff6444;
+  --brand-secondary: #85acb0; }
+
+:root .theme--light {
+  --general-main-1: #fff;
+  --general-main-2: #fff;
+  --general-section-1: #f2f3f4;
+  --general-section-2: #f2f3f4;
+  --general-disabled: #eaeced;
+  --general-hover: #e6e9e9;
+  --general-active: #d6dadb;
+  --text-prominent: #333;
+  --text-general: #333;
+  --text-less-prominent: #999;
+  --text-disabled: #d6d6d6;
+  --text-profit-success: #4bb4b3;
+  --text-loss-danger: #ec3f3f;
+  --text-colored-background: #fff;
+  --purchase-main-1: #4bb4b3;
+  --purchase-section-1: #3d9494;
+  --purchase-main-2: #ec3f3f;
+  --purchase-section-2: #d33636;
+  --purchase-disabled-main: #eaeced;
+  --purchase-disabled-section: #e6e9e9;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #999;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
+  --state-normal: #fff;
+  --state-hover: #e6e9e9;
+  --state-active: #d6dadb;
+  --state-disabled: #eaeced;
+  --border-normal: #d6dadb;
+  --border-hover: #999;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #eaeced;
+  --fill-normal: #fff;
+  --fill-hover: #999;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #eaeced;
+  --status-default: #eaeced;
+  --status-danger: #ec3f3f;
+  --status-success: #4bb4b3;
+  --status-warning: #ffad3a;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(75,180,179,0.92); }
+
+:root .theme--dark {
+  --general-main-1: #0e0e0e;
+  --general-main-2: #151717;
+  --general-section-1: #151717;
+  --general-section-2: #0e0e0e;
+  --general-disabled: #1d1f20;
+  --general-hover: #242828;
+  --general-active: #323738;
+  --text-prominent: #fff;
+  --text-general: #c2c2c2;
+  --text-less-prominent: #6e6e6e;
+  --text-disabled: #3e3e3e;
+  --text-profit-success: #00a79e;
+  --text-loss-danger: #cc2e3d;
+  --text-colored-background: #fff;
+  --purchase-main-1: #00a79e;
+  --purchase-section-1: #008079;
+  --purchase-main-2: #cc2e3d;
+  --purchase-section-2: #a32430;
+  --purchase-disabled-main: #1d1f20;
+  --purchase-disabled-section: #0e0e0e;
+  --button-primary-default: var(--brand-red-coral);
+  --button-secondary-default: #6e6e6e;
+  --button-tertiary-default: transparent;
+  --button-primary-hover: #eb3e48;
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
+  --state-normal: #0e0e0e;
+  --state-hover: #242828;
+  --state-active: #323738;
+  --state-disabled: #1d1f20;
+  --border-normal: #323738;
+  --border-hover: #6e6e6e;
+  --border-active: var(--brand-secondary);
+  --border-disabled: #1d1f20;
+  --fill-normal: #0e0e0e;
+  --fill-hover: #6e6e6e;
+  --fill-active: var(--brand-secondary);
+  --fill-disabled: #1d1f20;
+  --status-default: #eaeced;
+  --status-danger: #cc2e3d;
+  --status-warning: #ffad3a;
+  --status-success: #00a79e;
+  --status-info: #377cfc;
+  --status-colored-background: #fff;
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .dc-label {
   font-size: 14px;
@@ -6945,6 +8416,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -6983,11 +8456,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -7006,7 +8479,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -7032,11 +8505,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -7055,7 +8528,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -7205,11 +8678,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -7228,7 +8701,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -7255,11 +8728,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -7278,13 +8751,15 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 /*------------------------------------*
  *  # Constants
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -7323,11 +8798,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -7346,7 +8821,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -7372,11 +8847,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -7395,7 +8870,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -7545,11 +9020,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -7568,7 +9043,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -7595,11 +9070,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -7618,13 +9093,15 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 /*------------------------------------*
  *  # Constants
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -7663,11 +9140,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -7686,7 +9163,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -7712,11 +9189,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -7735,7 +9212,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -8204,6 +9681,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -8242,11 +9721,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -8265,7 +9744,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -8291,11 +9770,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -8314,7 +9793,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -8835,17 +10314,6 @@ html {
 
 /** @define set-currency; weak */
 .set-currency .btn {
-  font-size: 1.4em;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 700;
-  text-transform: capitalize;
-  text-align: center;
-  line-height: 1.5;
-  text-transform: none;
-  color: var(--general-main-1);
-  text-decoration: none;
-  width: 11.6rem;
-  height: 3.2rem;
   display: flex;
   align-items: center; }
 
@@ -8867,6 +10335,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -8905,11 +10375,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -8928,7 +10398,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -8954,11 +10424,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -8977,7 +10447,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -9151,6 +10621,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -9189,11 +10661,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -9212,7 +10684,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -9238,11 +10710,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -9261,7 +10733,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -9413,6 +10885,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -9451,11 +10925,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -9474,7 +10948,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -9500,11 +10974,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -9523,7 +10997,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -9673,11 +11147,11 @@ html {
   --button-secondary-default: #999;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: rgba(0,0,0,0.0784314);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(255,255,255,0.960784);
-  --shadow-menu: rgba(0,0,0,0.160784);
+  --button-secondary-hover: rgba(0,0,0,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(255,255,255,0.96);
+  --shadow-menu: rgba(0,0,0,0.16);
   --state-normal: #fff;
   --state-hover: #e6e9e9;
   --state-active: #d6dadb;
@@ -9696,7 +11170,7 @@ html {
   --status-warning: #ffad3a;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#4bb4b3, 0.92); }
+  --transparent-success: rgba(75,180,179,0.92); }
 
 :root .theme--dark {
   --general-main-1: #0e0e0e;
@@ -9723,11 +11197,11 @@ html {
   --button-secondary-default: #6e6e6e;
   --button-tertiary-default: transparent;
   --button-primary-hover: #eb3e48;
-  --button-secondary-hover: transparentize(#fff, 0.92);
-  --button-tertiary-hover: rgba(255,68,79,0.0784314);
-  --overlay-outside-dialog: rgba(0,0,0,0.721569);
-  --overlay-inside-dialog: rgba(14,14,14,0.960784);
-  --shadow-menu: rgba(0,0,0,0.839216);
+  --button-secondary-hover: rgba(255,255,255,0.08);
+  --button-tertiary-hover: rgba(255,68,79,0.08);
+  --overlay-outside-dialog: rgba(0,0,0,0.72);
+  --overlay-inside-dialog: rgba(14,14,14,0.96);
+  --shadow-menu: rgba(0,0,0,0.84);
   --state-normal: #0e0e0e;
   --state-hover: #242828;
   --state-active: #323738;
@@ -9746,7 +11220,7 @@ html {
   --status-success: #00a79e;
   --status-info: #377cfc;
   --status-colored-background: #fff;
-  --transparent-success: transparentize(#00a79e, 0.92); }
+  --transparent-success: rgba(0,167,158,0.92); }
 
 .barspinner {
   margin: auto;
@@ -9834,6 +11308,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -9872,11 +11348,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -9895,7 +11371,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -9921,11 +11397,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -9944,7 +11420,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -10247,6 +11723,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -10285,11 +11763,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -10308,7 +11786,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -10334,11 +11812,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -10357,7 +11835,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -10631,6 +12109,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -10669,11 +12149,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -10692,7 +12172,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -10718,11 +12198,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -10741,7 +12221,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -11054,6 +12534,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -11092,11 +12574,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -11115,7 +12597,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -11141,11 +12623,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -11164,7 +12646,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -11407,6 +12889,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -11445,11 +12929,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -11468,7 +12952,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -11494,11 +12978,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -11517,7 +13001,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -11705,6 +13189,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -11743,11 +13229,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -11766,7 +13252,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -11792,11 +13278,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -11815,7 +13301,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -12169,6 +13655,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -12207,11 +13695,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -12230,7 +13718,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -12256,11 +13744,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -12279,7 +13767,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -12685,6 +14173,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -12723,11 +14213,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -12746,7 +14236,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -12772,11 +14262,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -12795,7 +14285,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -13128,6 +14618,8 @@ html {
  *------------------------------------*/
 /* stylelint-disable color-no-hex */
 /* COLOR PALETTE */
+/* colors */
+/* alpha colors */
 :root {
   --text-size-xxs: 1.2rem;
   --text-size-xs: 1.4rem;
@@ -13166,11 +14658,11 @@ html {
     --button-secondary-default: #999999;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: rgba(0,0,0,0.07843);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(255,255,255,0.96078);
-    --shadow-menu: rgba(0,0,0,0.16078);
+    --button-secondary-hover: rgba(0, 0, 0, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(255, 255, 255, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.16);
     --state-normal: #ffffff;
     --state-hover: #e6e9e9;
     --state-active: #d6dadb;
@@ -13189,7 +14681,7 @@ html {
     --status-warning: #ffad3a;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#4bb4b3, 0.92); }
+    --transparent-success: rgba(75, 180, 179, 0.92); }
   :root .theme--dark {
     --general-main-1: #0e0e0e;
     --general-main-2: #151717;
@@ -13215,11 +14707,11 @@ html {
     --button-secondary-default: #6e6e6e;
     --button-tertiary-default: transparent;
     --button-primary-hover: #eb3e48;
-    --button-secondary-hover: transparentize(#ffffff, 0.92);
-    --button-tertiary-hover: rgba(255,68,79,0.07843);
-    --overlay-outside-dialog: rgba(0,0,0,0.72157);
-    --overlay-inside-dialog: rgba(14,14,14,0.96078);
-    --shadow-menu: rgba(0,0,0,0.83922);
+    --button-secondary-hover: rgba(255, 255, 255, 0.08);
+    --button-tertiary-hover: rgba(255, 68, 79, 0.08);
+    --overlay-outside-dialog: rgba(0, 0, 0, 0.72);
+    --overlay-inside-dialog: rgba(14, 14, 14, 0.96);
+    --shadow-menu: rgba(0, 0, 0, 0.84);
     --state-normal: #0e0e0e;
     --state-hover: #242828;
     --state-active: #323738;
@@ -13238,7 +14730,7 @@ html {
     --status-success: #00a79e;
     --status-info: #377cfc;
     --status-colored-background: #ffffff;
-    --transparent-success: transparentize(#00a79e, 0.92); }
+    --transparent-success: rgba(0, 167, 158, 0.92); }
 
 /* Preserve legacy variables */
 /* Primary */
@@ -14069,17 +15561,19 @@ table {
   .app-contents--is-route-modal {
     background-color: var(--overlay-outside-dialog); }
   .app-contents--show-positions-drawer .trade-container .chart-container {
-    width: calc(100% - 480px - 18px);
-    margin-left: 258px; }
+    width: 100%; }
     .app-contents--show-positions-drawer .trade-container .chart-container .cq-top-ui-widgets {
-      transform: translate3d(1px, 0, 0); }
-      .app-contents--show-positions-drawer .trade-container .chart-container .cq-top-ui-widgets .info-box {
-        transform: translate3d(1px, 0, 0); }
+      transform: translate3d(248px, 0, 0); }
+    .app-contents--show-positions-drawer .trade-container .chart-container .cq-chart-controls {
+      transform: translate3d(130px, 0, 0) !important; }
+    .app-contents--show-positions-drawer .trade-container .chart-container .cq-bottom-ui-widgets .digits__container {
+      transform: translate3d(130px, 0, 0) !important; }
     .app-contents--show-positions-drawer .trade-container .chart-container .cq-chart-control-left .cq-chart-controls {
-      transform: translate3d(1px, 0, 0) !important; }
-  .app-contents--show-positions-drawer .statement.container {
-    max-width: calc(100% - 252px);
-    margin-left: calc(240px + 12px); }
+      transform: translate3d(248px, 0, 0) !important; }
+    .app-contents--show-positions-drawer .trade-container .chart-container .cq-chart-control-left .cq-bottom-ui-widgets .digits__container {
+      transform: translate3d(170px, 40px, 0) !important; }
+    .app-contents--show-positions-drawer .trade-container .chart-container__loader .barspinner {
+      transform: translate3d(130px, 0, 0) !important; }
   @media screen and (max-width: 768px) {
     .app-contents {
       margin-bottom: 0;
@@ -14147,6 +15641,8 @@ table {
           bottom: 30px !important; }
           .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .cq-bottom-ui-widgets .digits {
             margin-right: 0; }
+            .trade-container__replay .replay-chart__container .smartcharts .ciq-chart .cq-bottom-ui-widgets .digits__container {
+              transition: transform 0.25s ease; }
   @media (max-width: 768px) {
     .trade-container {
       flex-direction: column; } }
@@ -14154,7 +15650,6 @@ table {
 /** @define chart-container; weak */
 .chart-container {
   width: 100%;
-  transition: width 0.15s ease-out, margin 0.15s ease-out;
   position: relative;
   z-index: 1; }
   .chart-container__loader {
@@ -15175,10 +16670,10 @@ table {
 
 .positions-drawer {
   width: 240px;
-  height: calc(100vh - 48px - 36px - 2px - (8px * 3.6));
+  height: calc(100% - 32px);
   margin-top: 16px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 4px;
   box-sizing: border-box;
@@ -15190,6 +16685,19 @@ table {
   border: 1px solid var(--general-section-1);
   background-color: var(--general-section-1);
   color: var(--text-prominent); }
+  .positions-drawer__bg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background: var(--general-main-1);
+    transition: opacity 0.25s linear;
+    opacity: 0;
+    pointer-events: none; }
+    .positions-drawer__bg--open {
+      opacity: 1; }
   .positions-drawer--open {
     transform: translateX(8px);
     opacity: 1; }
@@ -16335,7 +17843,7 @@ table {
       text-transform: capitalize;
       text-align: left;
       line-height: 1.5;
-      color: var(--text-general);
+      color: var(--text-prominent);
       font-weight: bold;
       vertical-align: middle;
       padding-left: 0.4em; }
@@ -16420,7 +17928,6 @@ table {
   box-sizing: border-box;
   margin-bottom: 0.1em;
   transition: transform 0.3s opacity 0.3s;
-  background-color: var(--state-normal);
   color: var(--text-general);
   border-radius: 4px; }
   .contract-type-item:hover {
@@ -18649,7 +20156,7 @@ table {
       text-transform: capitalize;
       text-align: left;
       line-height: 1.5;
-      color: var(--text-less-prominent); }
+      color: var(--text-general); }
       .trade-container__fieldset-info--left {
         left: 5px; }
     .trade-container__fieldset-wrapper--disabled {
