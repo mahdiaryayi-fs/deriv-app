@@ -15,7 +15,7 @@ importScripts("/br_fix-birth-date-format/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/br_fix-birth-date-format/workbox-v4.3.1"});
 
 importScripts(
-  "/br_fix-birth-date-format/precache-manifest.09231c2d5c9a123348d6f061904977b5.js"
+  "/br_fix-birth-date-format/precache-manifest.13298e522a865be494d870fa9ccbfa7a.js"
 );
 
 workbox.core.skipWaiting();
