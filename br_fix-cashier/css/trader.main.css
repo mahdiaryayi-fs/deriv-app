@@ -4660,6 +4660,7 @@ table {
         background: var(--general-hover); }
   .vertical-tab__tab {
     display: flex;
+    min-width: 28%;
     height: 100%;
     flex-direction: column;
     border-radius: 4px 0 0 4px;
