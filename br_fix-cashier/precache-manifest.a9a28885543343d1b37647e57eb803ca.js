@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/br_fix-cashier/css/core.default~account-signu~b1de49a1.2097a3ea8995d3f5ad4a.css"
   },
   {
-    "revision": "acf2d790ff90bb10a51a",
+    "revision": "e63981ffb2eec3b55597",
     "url": "/br_fix-cashier/css/core.main.css"
   },
   {
@@ -1116,7 +1116,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/br_fix-cashier/js/core.icon-won.ca03c6c3f4e56eedeb2d.js"
   },
   {
-    "revision": "acf2d790ff90bb10a51a",
+    "revision": "e63981ffb2eec3b55597",
     "url": "/br_fix-cashier/js/core.main.1d9fd01cdbdfdf00e91a.js"
   },
   {

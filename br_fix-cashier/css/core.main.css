@@ -10670,7 +10670,7 @@ table {
     .cashier__text--bold {
       font-weight: bold; }
   .cashier__modal-tab {
-    min-width: 24rem; }
+    min-width: 28%; }
   .cashier__success {
     text-align: center;
     background-color: var(--general-section-1);
