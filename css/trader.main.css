@@ -3161,6 +3161,77 @@ table {
     left: 107%;
     right: -8%; } }
 
+/** @define button-menu */
+.button-menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative; }
+  .button-menu__button:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .button-menu__button:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .button-menu__button {
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    width: 50%;
+    background-color: var(--state-normal);
+    /* postcss-bem-linter: ignore */ }
+    .button-menu__button:hover:not(.button-menu__button--active) {
+      background-color: var(--state-hover) !important; }
+    .button-menu__button span {
+      font-size: 1.4rem;
+      color: var(--text-general);
+      font-weight: 400;
+      text-transform: unset;
+      text-align: left;
+      line-height: 1.5;
+      color: var(--text-general); }
+    .button-menu__button--active {
+      cursor: auto;
+      cursor: initial;
+      background-color: var(--state-active) !important; }
+      .button-menu__button--active span {
+        font-size: 1.4rem;
+        color: var(--text-colored-background);
+        font-weight: 700;
+        text-transform: unset;
+        text-align: left;
+        line-height: 1.5;
+        color: var(--text-prominent); }
+  .button-menu__wrapper {
+    position: relative;
+    border-radius: 4px;
+    width: 100%;
+    background-color: var(--state-normal);
+    display: -webkit-box;
+    display: flex; }
+    .button-menu__wrapper .button-menu__button, .button-menu__wrapper .button-menu__button--active {
+      background-color: rgba(0, 0, 0, 0) !important;
+      z-index: 1; }
+    .button-menu__wrapper .button-menu__button:nth-last-child(2) {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+  .button-menu--highlight {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+    pointer-events: none;
+    background-color: var(--state-active) !important; }
+
 /** @define input-field; weak */
 .input-field {
   margin: 0.8em 0 0;
