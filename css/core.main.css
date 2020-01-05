@@ -312,7 +312,7 @@
           flex-direction: row;
   background: var(--general-active);
   color: var(--text-prominent);
-  z-index: 999; }
+  z-index: 1; }
 
 .dc-popover__bubble__icon {
   -webkit-box-flex: 1;
@@ -3076,7 +3076,7 @@ html {
   top: 4rem;
   text-align: left !important;
   padding-top: 0.4rem;
-  padding-left: 0.4rem;
+  padding-left: 1.2rem;
   color: var(--brand-red-coral);
   font-size: var(--text-size-xxs); }
 
@@ -3527,7 +3527,7 @@ html {
   top: 4rem;
   text-align: left !important;
   padding-top: 0.4rem;
-  padding-left: 0.4rem;
+  padding-left: 1.2rem;
   color: var(--brand-red-coral);
   font-size: var(--text-size-xxs); }
 
@@ -10564,8 +10564,8 @@ table {
     margin-bottom: 0.4rem; }
 
 .account-transfer__drop-down {
-  min-width: calc(calc(100% - calc(16px + 1.6rem)) / 2);
-  width: auto;
+  min-width: calc(calc(100% - calc(16px + 1.6rem)) / 2) !important;
+  width: auto !important;
   margin-bottom: 3.4rem; }
 
 .account-transfer__currency, .account-transfer__balance {
@@ -10605,7 +10605,8 @@ div.payment-agent-transfer__input {
   width: 29.6rem;
   display: -webkit-inline-box;
   display: inline-flex;
-  margin-bottom: 3.1rem; }
+  margin-bottom: 3.1rem;
+  float: left; }
   div.payment-agent-transfer__input:not(:first-child) {
     margin-left: 2.4rem; }
 
