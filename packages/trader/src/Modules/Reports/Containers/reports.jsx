@@ -2,14 +2,23 @@ import PropTypes         from 'prop-types';
 import React             from 'react';
 import { withRouter }    from 'react-router-dom';
 import { localize }      from '@deriv/translations';
+import {
+    DesktopWrapper,
+    MobileWrapper }      from '@deriv/components';
 import { FadeWrapper }   from 'App/Components/Animations';
 import VerticalTab       from 'App/Components/Elements/VerticalTabs/vertical-tab.jsx';
 import AppRoutes         from 'Constants/routes';
 import { connect }       from 'Stores/connect';
 import WalletInformation from './wallet-information.jsx';
+import MobileDialog      from 'Modules/Trading/Components/Elements/mobile-dialog.jsx';
 import 'Sass/app/modules/reports.scss';
 
 class Reports extends React.Component {
+
+    state = {
+        open: true,
+    };
+
     setWrapperRef = (node) => {
         this.wrapper_ref = node;
     };
@@ -30,6 +39,18 @@ class Reports extends React.Component {
         this.props.toggleReports(false);
         this.props.disableRouteMode();
         document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    handleCloseDialog = () => {
+        debugger
+        this.setState({
+            open: false,
+        })
+    }
+
+    getCurrentRouteInfo = (path) => {
+        let current_route = this.props.routes.filter(item => item.path === path);
+        return current_route.length ? current_route[0] : null
     }
 
     render () {
@@ -63,27 +84,41 @@ class Reports extends React.Component {
                 title    : '',
             },
         ];
+        const CurrentReportComponent = this.getCurrentRouteInfo(this.props.location.pathname).component
         return (
-            <FadeWrapper
-                is_visible={this.props.is_visible}
-                className='reports-page-wrapper'
-                keyname='reports-page-wrapper'
-            >
-                <div className='reports' ref={this.setWrapperRef}>
-                    <VerticalTab
-                        header_title={localize('Reports')}
-                        action_bar={action_bar_items}
-                        action_bar_classname='reports__inset_header'
-                        alignment='center'
-                        id='report'
-                        classNameHeader='reports__tab-header'
-                        current_path={this.props.location.pathname}
-                        is_routed={true}
-                        is_full_width={true}
-                        list={menu_options()}
-                    />
-                </div>
-            </FadeWrapper>
+            <React.Fragment>
+                <DesktopWrapper>
+                    <FadeWrapper
+                        is_visible={this.props.is_visible}
+                        className='reports-page-wrapper'
+                        keyname='reports-page-wrapper'
+                        >
+                        <div className='reports' ref={this.setWrapperRef}>
+                            <VerticalTab
+                                header_title={localize('Reports')}
+                                action_bar={action_bar_items}
+                                action_bar_classname='reports__inset_header'
+                                alignment='center'
+                                id='report'
+                                classNameHeader='reports__tab-header'
+                                current_path={this.props.location.pathname}
+                                is_routed={true}
+                                is_full_width={true}
+                                list={menu_options()}
+                            />
+                        </div>
+                    </FadeWrapper>
+                </DesktopWrapper>
+                <MobileWrapper>
+                    <MobileDialog
+                        visible={this.state.open}
+                        title={this.getCurrentRouteInfo(this.props.location.pathname).title}
+                        onClose={this.handleCloseDialog}
+                    >
+                        <CurrentReportComponent />
+                    </MobileDialog>
+                </MobileWrapper>
+            </React.Fragment>
         );
     }
 }
