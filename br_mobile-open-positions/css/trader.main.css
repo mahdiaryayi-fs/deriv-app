@@ -3665,7 +3665,7 @@ table {
   color: var(--text-general); }
   .positions-drawer-modal__wrapper {
     padding: 0.8em;
-    margin: 0 1em 1em 1em;
+    margin: 0 1em 1em;
     border-radius: 4px;
     transition: transform 0.25s ease, opacity 0.25s linear;
     position: relative;
