@@ -10768,8 +10768,7 @@ html,
 
 /* @define account-types; weak */
 .account-types {
-  height: 63.5rem;
-  overflow-y: auto; }
+  height: 63.5rem; }
   .account-types__intro {
     color: var(--text-general);
     font-size: 1.4rem;
@@ -10836,42 +10835,42 @@ html,
       height: 25.2rem;
       min-width: 100%;
       padding: 1.6rem; }
-      .account-types .account-card__main__title {
+      .account-types .account-card__main-title {
         color: var(--text-general);
         font-size: 1.6rem;
         font-weight: bold;
         line-height: 1.5;
         margin-bottom: 0.4rem; }
-      .account-types .account-card__main__subtitle {
+      .account-types .account-card__main-subtitle {
         color: var(--text-profit-success);
         font-size: 1.2rem;
         font-weight: bold;
         line-height: 1.5;
         margin-bottom: 0.8rem; }
-      .account-types .account-card__main__items {
+      .account-types .account-card__main-items {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0 0.8rem;
         margin-bottom: 1.6rem; }
-      .account-types .account-card__main__item {
+      .account-types .account-card__main-item {
         margin-bottom: 0.8rem; }
-        .account-types .account-card__main__item__label {
+        .account-types .account-card__main-item-label {
           color: var(--text-less-prominent);
           display: inline-block;
           font-size: 1.2rem;
           white-space: nowrap;
           width: 10.3rem; }
-        .account-types .account-card__main__item__value {
+        .account-types .account-card__main-item-value {
           color: var(--text-general);
           display: inline-block;
           font-size: 1.2rem;
           white-space: nowrap;
           width: 8rem; }
-      .account-types .account-card__main__help {
+      .account-types .account-card__main-help {
         cursor: pointer;
         vertical-align: middle;
         margin-left: 0.4rem; }
-      .account-types .account-card__main__button {
+      .account-types .account-card__main-button {
         width: calc(100% - 32px);
         box-sizing: border-box;
         position: absolute;
@@ -10882,37 +10881,37 @@ html,
       line-height: 1.5;
       min-width: 100%;
       padding: 0.8rem 1.6rem 1.6rem; }
-      .account-types .account-card__description__title {
+      .account-types .account-card__description-title {
         color: var(--text-profit-success);
         font-size: 1.2rem;
         font-weight: bold;
         line-height: 1.5;
         padding-bottom: 0.8rem; }
-      .account-types .account-card__description__text {
+      .account-types .account-card__description-text {
         color: var(--text-general);
         font-size: 1.2rem;
         line-height: 1.5;
         margin-bottom: 0.8rem; }
-        .account-types .account-card__description__text--small {
+        .account-types .account-card__description-text--small {
           color: var(--text-general);
           font-size: 1rem;
           line-height: 1.4; }
-      .account-types .account-card__description__title-text {
+      .account-types .account-card__description-title-text {
         padding-left: 0.8rem; }
-      .account-types .account-card__description__back {
+      .account-types .account-card__description-back {
         cursor: pointer;
         vertical-align: middle; }
-      .account-types .account-card__description__learn {
+      .account-types .account-card__description-learn {
         position: absolute;
         bottom: 1.6rem;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content; }
-      .account-types .account-card__description__learn-title {
+      .account-types .account-card__description-learn-title {
         color: var(--text-less-prominent);
         font-size: 1rem;
         line-height: 1.4; }
-      .account-types .account-card__description__learn-items {
+      .account-types .account-card__description-learn-items {
         background-color: var(--brand-red-coral);
         border-radius: 10px;
         color: var(--text-colored-background);
