@@ -1610,7 +1610,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!****************************!*\
   !*** ./Constants/index.js ***!
   \****************************/
-/*! exports provided: getMarketNamesMap, getUnsupportedContracts, getSupportedContracts, getContractConfig, getContractTypeDisplay, getContractTypePosition, routes, MAX_MOBILE_WIDTH, MAX_TABLET_WIDTH */
+/*! exports provided: routes, getMarketNamesMap, getUnsupportedContracts, getSupportedContracts, getContractConfig, getContractTypeDisplay, getContractTypePosition, MAX_MOBILE_WIDTH, MAX_TABLET_WIDTH */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
