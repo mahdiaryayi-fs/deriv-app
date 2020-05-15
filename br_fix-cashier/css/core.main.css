@@ -2303,7 +2303,7 @@
 .dc-vertical-tab__content--floating {
   max-width: 952px;
   min-width: 672px;
-  margin-left: 2.4rem; }
+  margin: 0 2.4rem; }
 
 /*------------------------------------*
  *  # Constants
@@ -2503,9 +2503,13 @@
 
 /** @define dc-modal; */
 .dc-modal__container_modal-settings {
+  /* postcss-bem-linter: ignore */
   /* postcss-bem-linter: ignore */ }
   .dc-modal__container_modal-settings .dc-modal-header {
     border-bottom-width: 0; }
+  .dc-modal__container_modal-settings .dc-vertical-tab__tab-meta-wrapper {
+    width: 100%;
+    max-width: 206px; }
 
 /*------------------------------------*
  *  # Constants
@@ -4671,6 +4675,9 @@
 
 .dc-autocomplete__trailing-icon--opened {
   transform: rotate(-180deg); }
+
+.dc-autocomplete__trailing-icon--disabled {
+  --fill-color1: var(--text-disabled) !important; }
 
 .dc-autocomplete__trailing-icon .color1-fill {
   fill: var(--text-less-prominent); }
@@ -8584,7 +8591,7 @@
   bottom: 0; }
 
 .dc-dialog__wrapper {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -9458,10 +9465,10 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% + 18px);
   /* margin shorthand for values below does not work */
+  width: calc(100% + 16px);
   margin-top: 8px;
-  margin-left: -9px;
+  margin-left: -8px;
   margin-bottom: -9px;
   margin-right: 0;
   padding: 8px 0;
