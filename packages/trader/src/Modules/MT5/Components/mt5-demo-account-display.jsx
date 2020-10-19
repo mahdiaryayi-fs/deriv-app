@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '@deriv/components';
+import { Icon, Carousel } from '@deriv/components';
 import { localize } from '@deriv/translations';
 import { eu_real_financial_specs } from 'Modules/MT5/Constants/mt5-specifications';
 import { MT5AccountCard } from './mt5-account-card.jsx';
@@ -32,14 +32,10 @@ const MT5DemoAccountDisplay = ({
             });
         }
     };
-
-    return is_loading ? (
-        <div className='mt5-demo-accounts-display'>
-            <Loading />
-        </div>
-    ) : (
-        <div className='mt5-demo-accounts-display'>
-            {(landing_companies?.mt_gaming_company?.financial || !is_logged_in) && (
+    const available_cards = React.useMemo(() => {
+        let cards = [];
+        if (landing_companies?.mt_gaming_company?.financial || !is_logged_in) {
+            cards.push(
                 <MT5AccountCard
                     has_mt5_account={has_mt5_account}
                     icon={() => <Icon icon='IcMt5SyntheticPlatform' size={64} />}
@@ -74,9 +70,10 @@ const MT5DemoAccountDisplay = ({
                         [localize('Number of assets')]: localize('10+'),
                     }}
                 />
-            )}
-
-            {(landing_companies?.mt_financial_company?.financial || !is_logged_in) && (
+            );
+        }
+        if (landing_companies?.mt_financial_company?.financial || !is_logged_in) {
+            cards.push(
                 <MT5AccountCard
                     has_mt5_account={has_mt5_account}
                     icon={() => <Icon icon='IcMt5FinancialPlatform' size={64} />}
@@ -116,8 +113,10 @@ const MT5DemoAccountDisplay = ({
                               }
                     }
                 />
-            )}
-            {(landing_companies?.mt_financial_company?.financial_stp || !is_logged_in) && (
+            );
+        }
+        if (landing_companies?.mt_financial_company?.financial_stp || !is_logged_in) {
+            cards.push(
                 <MT5AccountCard
                     has_mt5_account={has_mt5_account}
                     icon={() => <Icon icon='IcMt5FinancialStpPlatform' size={64} />}
@@ -152,7 +151,18 @@ const MT5DemoAccountDisplay = ({
                         [localize('Number of assets')]: localize('50+'),
                     }}
                 />
-            )}
+            );
+        }
+        return cards;
+    }, [landing_companies, is_logged_in]);
+
+    return is_loading ? (
+        <div className='mt5-demo-accounts-display'>
+            <Loading />
+        </div>
+    ) : (
+        <div className='mt5-demo-accounts-display'>
+            <Carousel list={available_cards} width={304} nav_position='middle' />
         </div>
     );
 };
