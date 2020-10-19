@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { DesktopWrapper, Icon, MobileWrapper, Tabs } from '@deriv/components';
-// TODO: [mt5-redesign] replace tabs with radiogroup once card component is ready
-// import { DesktopWrapper, Icon, MobileWrapper, RadioGroup } from '@deriv/components';
+import { DesktopWrapper, Icon, MobileWrapper, RadioGroup } from '@deriv/components';
 import { isEmptyObject, routes } from '@deriv/shared';
 import { Localize, localize } from '@deriv/translations';
 import { connect } from 'Stores/connect';
@@ -22,15 +20,6 @@ import { MT5DemoAccountDisplay } from '../Components/mt5-demo-account-display.js
 import { MT5RealAccountDisplay } from '../Components/mt5-real-account-display.jsx';
 import { getBrokerName, getServerName, getPlatformMt5DownloadLink } from '../Helpers/constants';
 import 'Sass/app/modules/mt5/mt5-dashboard.scss';
-
-const LoadTab = ({ children, is_loading, loading_component, ...props }) => {
-    const LoadingComponent = loading_component;
-    if (is_loading) {
-        return <LoadingComponent />;
-    }
-
-    return <Tabs {...props}>{children}</Tabs>;
-};
 
 class MT5Dashboard extends React.Component {
     state = {
@@ -177,132 +166,77 @@ class MT5Dashboard extends React.Component {
                                 selected_account_type={this.state.password_manager.selected_account_type}
                                 toggleModal={this.togglePasswordManagerModal}
                             />
-                            <LoadTab
-                                active_index={this.state.active_index}
-                                top
-                                center
-                                is_loading={is_loading}
-                                is_logged_in={is_logged_in}
-                                loading_component={LoadingMT5RealAccountDisplay}
-                                onTabItemClick={this.updateActiveIndex}
-                            >
-                                <div label={localize('Demo account')}>
-                                    <MT5DemoAccountDisplay
+                            {!is_loading && (
+                                <RadioGroup
+                                    className='radio-group__save-type'
+                                    name='account_type'
+                                    items={[
+                                        {
+                                            id: 'demo',
+                                            label: localize('Demo'),
+                                            value: 'demo',
+                                        },
+                                        {
+                                            id: 'real',
+                                            label: localize('Real'),
+                                            value: 'real',
+                                        },
+                                    ]}
+                                    selected={this.state.is_demo_tab ? 'demo' : 'real'}
+                                    onToggle={e => this.updateActiveIndex(e.target.value === 'demo' ? 0 : 1)}
+                                />
+                            )}
+                            {this.state.is_demo_tab ? (
+                                <MT5DemoAccountDisplay
+                                    is_eu={is_eu}
+                                    // TODO: remove eslint disable once this is uncommented
+                                    eslint-disable-next-line
+                                    max-len
+                                    is_eu_enabled={is_eu_enabled} // TODO [deriv-eu] remove is_eu_enabled check once EU is ready for production
+                                    is_logged_in={is_logged_in}
+                                    has_maltainvest_account={has_maltainvest_account}
+                                    openAccountNeededModal={openAccountNeededModal}
+                                    standpoint={standpoint}
+                                    is_loading={is_loading}
+                                    has_mt5_account={has_mt5_account}
+                                    current_list={current_list}
+                                    onSelectAccount={createMT5Account}
+                                    landing_companies={landing_companies}
+                                    openAccountTransfer={this.openAccountTransfer}
+                                    openPasswordManager={this.togglePasswordManagerModal}
+                                />
+                            ) : (
+                                <React.Fragment>
+                                    {should_show_missing_real_account && (
+                                        <MissingRealAccount onClickSignup={beginRealSignupForMt5} />
+                                    )}
+                                    <MT5RealAccountDisplay
                                         is_eu={is_eu}
+                                        // TODO: remove eslint disable once this is uncommented
+                                        eslint-disable-next-line
+                                        max-len
                                         is_eu_enabled={is_eu_enabled} // TODO [deriv-eu] remove is_eu_enabled check once EU is ready for production
+                                        is_eu_country={is_eu_country}
                                         is_logged_in={is_logged_in}
                                         has_maltainvest_account={has_maltainvest_account}
+                                        has_malta_account={has_malta_account}
                                         openAccountNeededModal={openAccountNeededModal}
-                                        standpoint={standpoint}
-                                        is_loading={is_loading}
-                                        has_mt5_account={has_mt5_account}
                                         current_list={current_list}
+                                        account_status={account_status}
+                                        has_mt5_account={has_mt5_account}
                                         onSelectAccount={createMT5Account}
+                                        account_settings={account_settings}
                                         landing_companies={landing_companies}
+                                        is_pending_authentication={is_pending_authentication}
+                                        is_fully_authenticated={is_fully_authenticated}
                                         openAccountTransfer={this.openAccountTransfer}
                                         openPasswordManager={this.togglePasswordManagerModal}
+                                        openPasswordModal={this.openRealPasswordModal}
+                                        has_real_account={has_real_account}
+                                        standpoint={standpoint}
                                     />
-                                </div>
-                                <div label={localize('Real account')}>
-                                    <React.Fragment>
-                                        {should_show_missing_real_account && (
-                                            <MissingRealAccount onClickSignup={beginRealSignupForMt5} />
-                                        )}
-                                        <MT5RealAccountDisplay
-                                            is_eu={is_eu}
-                                            is_eu_enabled={is_eu_enabled} // TODO [deriv-eu] remove is_eu_enabled check once EU is ready for production
-                                            is_eu_country={is_eu_country}
-                                            is_logged_in={is_logged_in}
-                                            has_maltainvest_account={has_maltainvest_account}
-                                            has_malta_account={has_malta_account}
-                                            openAccountNeededModal={openAccountNeededModal}
-                                            current_list={current_list}
-                                            account_status={account_status}
-                                            has_mt5_account={has_mt5_account}
-                                            onSelectAccount={createMT5Account}
-                                            account_settings={account_settings}
-                                            landing_companies={landing_companies}
-                                            is_pending_authentication={is_pending_authentication}
-                                            is_fully_authenticated={is_fully_authenticated}
-                                            openAccountTransfer={this.openAccountTransfer}
-                                            openPasswordManager={this.togglePasswordManagerModal}
-                                            openPasswordModal={this.openRealPasswordModal}
-                                            has_real_account={has_real_account}
-                                            standpoint={standpoint}
-                                        />
-                                    </React.Fragment>
-                                </div>
-                            </LoadTab>
-                            {/* TODO: [mt5-redesign] replace tabs with radiogroup once card component is ready */}
-                            {/* {!is_loading && ( */}
-                            {/*    <RadioGroup */}
-                            {/*        className='radio-group__save-type' */}
-                            {/*        name='account_type' */}
-                            {/*        items={[ */}
-                            {/*            { */}
-                            {/*                id: 'demo', */}
-                            {/*                label: localize('Demo'), */}
-                            {/*                value: 'demo', */}
-                            {/*            }, */}
-                            {/*            { */}
-                            {/*                id: 'real', */}
-                            {/*                label: localize('Real'), */}
-                            {/*                value: 'real', */}
-                            {/*            }, */}
-                            {/*        ]} */}
-                            {/*        selected={this.state.is_demo_tab ? 'demo' : 'real'} */}
-                            {/*        onToggle={e => this.updateActiveIndex(e.target.value === 'demo' ? 0 : 1)} */}
-                            {/*    /> */}
-                            {/* )} */}
-                            {/* {this.state.is_demo_tab ? ( */}
-                            {/*    <MT5DemoAccountDisplay */}
-                            {/*        is_eu={is_eu} */}
-                            {/* TODO: remove eslint disable once this is uncommented */}
-                            {/* eslint-disable-next-line max-len */}
-                            {/*        is_eu_enabled={is_eu_enabled} // TODO [deriv-eu] remove is_eu_enabled check once EU is ready for production */}
-                            {/*        is_logged_in={is_logged_in} */}
-                            {/*        has_maltainvest_account={has_maltainvest_account} */}
-                            {/*        openAccountNeededModal={openAccountNeededModal} */}
-                            {/*        standpoint={standpoint} */}
-                            {/*        is_loading={is_loading} */}
-                            {/*        has_mt5_account={has_mt5_account} */}
-                            {/*        current_list={current_list} */}
-                            {/*        onSelectAccount={createMT5Account} */}
-                            {/*        landing_companies={landing_companies} */}
-                            {/*        openAccountTransfer={this.openAccountTransfer} */}
-                            {/*        openPasswordManager={this.togglePasswordManagerModal} */}
-                            {/*    /> */}
-                            {/* ) : ( */}
-                            {/*    <React.Fragment> */}
-                            {/*        {should_show_missing_real_account && ( */}
-                            {/*            <MissingRealAccount onClickSignup={beginRealSignupForMt5} /> */}
-                            {/*        )} */}
-                            {/*        <MT5RealAccountDisplay */}
-                            {/*            is_eu={is_eu} */}
-                            {/* TODO: remove eslint disable once this is uncommented */}
-                            {/* eslint-disable-next-line max-len */}
-                            {/*            is_eu_enabled={is_eu_enabled} // TODO [deriv-eu] remove is_eu_enabled check once EU is ready for production */}
-                            {/*            is_eu_country={is_eu_country} */}
-                            {/*            is_logged_in={is_logged_in} */}
-                            {/*            has_maltainvest_account={has_maltainvest_account} */}
-                            {/*            has_malta_account={has_malta_account} */}
-                            {/*            openAccountNeededModal={openAccountNeededModal} */}
-                            {/*            current_list={current_list} */}
-                            {/*            account_status={account_status} */}
-                            {/*            has_mt5_account={has_mt5_account} */}
-                            {/*            onSelectAccount={createMT5Account} */}
-                            {/*            account_settings={account_settings} */}
-                            {/*            landing_companies={landing_companies} */}
-                            {/*            is_pending_authentication={is_pending_authentication} */}
-                            {/*            is_fully_authenticated={is_fully_authenticated} */}
-                            {/*            openAccountTransfer={this.openAccountTransfer} */}
-                            {/*            openPasswordManager={this.togglePasswordManagerModal} */}
-                            {/*            openPasswordModal={this.openRealPasswordModal} */}
-                            {/*            has_real_account={has_real_account} */}
-                            {/*            standpoint={standpoint} */}
-                            {/*        /> */}
-                            {/*    </React.Fragment> */}
-                            {/* )} */}
+                                </React.Fragment>
+                            )}
                             <div className='mt5-dashboard__info'>
                                 <div className='mt5-dashboard__info-description'>
                                     <Localize i18n_default_text='Use these in your apps' />
