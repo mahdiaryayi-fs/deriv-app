@@ -40,6 +40,62 @@ const MT5RealAccountDisplay = ({
     standpoint,
     is_logged_in,
 }) => {
+    const has_required_credentials =
+        account_settings.citizen && account_settings.tax_identification_number && account_settings.tax_residence;
+
+    const button_label = getRealFinancialStpBtnLbl(
+        is_fully_authenticated,
+        is_pending_authentication,
+        has_required_credentials
+    );
+
+    const is_real_financial_stp_disabled = !has_real_account || is_pending_authentication;
+
+    const onSelectRealSynthetic = () => {
+        if (is_eu_enabled && is_eu && standpoint.malta && !has_malta_account) {
+            // TODO [deriv-eu] remove is_eu_enabled once eu is released.
+            openAccountNeededModal('malta', localize('Deriv Synthetic'), localize('DMT5 Synthetic'));
+        } else {
+            onSelectAccount({ type: 'synthetic', category: 'real' });
+        }
+    };
+    const onSelectRealFinancial = () => {
+        if (is_eu_enabled && is_eu && !has_maltainvest_account) {
+            // TODO: [deriv-eu] remove is_eu_enabled when eu gets a release
+            openAccountNeededModal('maltainvest', localize('Deriv Financial'), localize('DMT5 Real Financial'));
+        } else {
+            onSelectAccount({ type: 'financial', category: 'real' });
+        }
+    };
+    const onSelectRealFinancialStp = () => {
+        const account_type = {
+            category: 'real',
+            type: 'financial_stp',
+        };
+        if (is_fully_authenticated && has_required_credentials) {
+            openPasswordModal(account_type);
+        } else if ((!is_fully_authenticated && !is_real_financial_stp_disabled) || !has_required_credentials) {
+            onSelectAccount(account_type);
+        }
+    };
+
+    const onClickFundRealSynthetic = () =>
+        openAccountTransfer(current_list['real.synthetic'], {
+            category: 'real',
+            type: 'synthetic',
+        });
+    const onClickFundRealFinancial = () =>
+        openAccountTransfer(current_list['real.financial'], {
+            category: 'real',
+            type: 'financial',
+        });
+    const onClickFundRealFinancialStp = () =>
+        openAccountTransfer(current_list['real.financial_stp'], {
+            category: 'real',
+            type: 'financial_stp',
+        });
+    const should_show_eu = (is_logged_in && is_eu) || (!is_logged_in && is_eu_country);
+
     const available_cards = React.useMemo(() => {
         let cards = [];
         if (landing_companies?.mt_gaming_company?.financial || !is_logged_in) {
@@ -125,61 +181,6 @@ const MT5RealAccountDisplay = ({
         return cards;
     }, [landing_companies, is_logged_in]);
 
-    const has_required_credentials =
-        account_settings.citizen && account_settings.tax_identification_number && account_settings.tax_residence;
-
-    const button_label = getRealFinancialStpBtnLbl(
-        is_fully_authenticated,
-        is_pending_authentication,
-        has_required_credentials
-    );
-
-    const is_real_financial_stp_disabled = !has_real_account || is_pending_authentication;
-
-    const onSelectRealSynthetic = () => {
-        if (is_eu_enabled && is_eu && standpoint.malta && !has_malta_account) {
-            // TODO [deriv-eu] remove is_eu_enabled once eu is released.
-            openAccountNeededModal('malta', localize('Deriv Synthetic'), localize('DMT5 Synthetic'));
-        } else {
-            onSelectAccount({ type: 'synthetic', category: 'real' });
-        }
-    };
-    const onSelectRealFinancial = () => {
-        if (is_eu_enabled && is_eu && !has_maltainvest_account) {
-            // TODO: [deriv-eu] remove is_eu_enabled when eu gets a release
-            openAccountNeededModal('maltainvest', localize('Deriv Financial'), localize('DMT5 Real Financial'));
-        } else {
-            onSelectAccount({ type: 'financial', category: 'real' });
-        }
-    };
-    const onSelectRealFinancialStp = () => {
-        const account_type = {
-            category: 'real',
-            type: 'financial_stp',
-        };
-        if (is_fully_authenticated && has_required_credentials) {
-            openPasswordModal(account_type);
-        } else if ((!is_fully_authenticated && !is_real_financial_stp_disabled) || !has_required_credentials) {
-            onSelectAccount(account_type);
-        }
-    };
-
-    const onClickFundRealSynthetic = () =>
-        openAccountTransfer(current_list['real.synthetic'], {
-            category: 'real',
-            type: 'synthetic',
-        });
-    const onClickFundRealFinancial = () =>
-        openAccountTransfer(current_list['real.financial'], {
-            category: 'real',
-            type: 'financial',
-        });
-    const onClickFundRealFinancialStp = () =>
-        openAccountTransfer(current_list['real.financial_stp'], {
-            category: 'real',
-            type: 'financial_stp',
-        });
-    const should_show_eu = (is_logged_in && is_eu) || (!is_logged_in && is_eu_country);
     return (
         <div className='mt5-real-accounts-display'>
             <Carousel list={available_cards} width={304} nav_position='middle' />
