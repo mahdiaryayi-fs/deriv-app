@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Formik } from 'formik';
-import { FormSubmitErrorMessage, Button, Loading, PasswordInput, PasswordMeter } from '@deriv/components';
+import { FormSubmitErrorMessage, Button, Loading, PasswordInput, PasswordMeter, Text, Icon } from '@deriv/components';
 import { withRouter } from 'react-router-dom';
 import { routes, isMobile, validPassword, validLength, getErrorMessages } from '@deriv/shared';
 import { localize } from '@deriv/translations';
@@ -10,6 +10,15 @@ import { connect } from 'Stores/connect';
 import FormSubHeader from 'Components/form-sub-header';
 import FormBody from 'Components/form-body';
 import FormFooter from 'Components/form-footer';
+
+const LinkedWithGoogle = () => {
+    return (
+        <div className='account__deriv-password-links'>
+            <div className='account__deriv-password-google'>{localize('Linked with Google')}</div>
+            <div className='account__deriv-password-unlink'>{localize('Unlink')}</div>
+        </div>
+    );
+};
 
 class ChangePasswordForm extends React.Component {
     state = {
@@ -81,7 +90,7 @@ class ChangePasswordForm extends React.Component {
 
         return (
             <React.Fragment>
-                <Formik
+                {/* <Formik
                     initialValues={{
                         old_password: '',
                         new_password: '',
@@ -180,6 +189,148 @@ class ChangePasswordForm extends React.Component {
                                     large
                                 />
                             </FormFooter>
+                        </form>
+                    )}
+                </Formik> */}
+                <Formik
+                    initialValues={{
+                        trading_password: '',
+                        confirm_trading_password: '',
+                    }}
+                    validate={() => {}} // TODO: Add this
+                    onSubmit={() => {}} // TODO: Add this
+                >
+                    {({
+                        values,
+                        errors,
+                        touched,
+                        status,
+                        setFieldTouched,
+                        handleChange,
+                        handleBlur,
+                        handleSubmit,
+                        isSubmitting,
+                    }) => (
+                        <form className='account-form account__password' onSubmit={handleSubmit}>
+                            {is_loading ? (
+                                <FormBody>
+                                    <Loading is_fullscreen={false} className='account__initial-loader' />;
+                                </FormBody>
+                            ) : (
+                                <FormBody scroll_offset={isMobile() ? '100px' : '55px'}>
+                                    <div className='account__deriv-password'>
+                                        <FormSubHeader
+                                            className='account__trading-password-subheader'
+                                            title={localize('Deriv password')}
+                                        />
+                                        <div className='account__deriv-password-wrapper'>
+                                            <Text
+                                                className='account__deriv-password-note'
+                                                as='p'
+                                                color='less-prominent'
+                                                size='xs'
+                                                align='left'
+                                            >
+                                                {localize(
+                                                    'Use this to log in to Deriv.com, Deriv Go, DTrader, SmartTrader, and DBot.'
+                                                )}
+                                            </Text>
+                                            <Text
+                                                className='account__deriv-password-apps-note'
+                                                as='p'
+                                                color='less-prominent'
+                                                size='xs'
+                                                align='left'
+                                            >
+                                                {localize('Apps you have linked to this password:')}
+                                            </Text>
+                                            <div className='account__deriv-password-apps'>
+                                                <Icon icon='IcBrandDTrader' size={32} />
+                                                <Icon icon='IcBrandDBot' size={32} />
+                                                <Icon icon='IcBrandSmarttrader' size={32} />
+                                            </div>
+                                            <LinkedWithGoogle />
+                                        </div>
+                                    </div>
+                                    <div className='account__trading-password'>
+                                        <FormSubHeader
+                                            className='account__trading-password-subheader'
+                                            title={localize('Trading password')}
+                                        />
+                                        <div className='account__trading-password-wrapper'>
+                                            <Text
+                                                className='account__trading-password-note'
+                                                as='p'
+                                                color='less-prominent'
+                                                size='xs'
+                                                align='left'
+                                            >
+                                                {localize('Use this to log in and trade on MT5 and DXTrade.')}
+                                            </Text>
+                                            <fieldset className='account-form__fieldset account__trading-password-password'>
+                                                <PasswordMeter
+                                                    input={new_pw_input}
+                                                    has_error={!!(touched.trading_password && errors.trading_password)}
+                                                    custom_feedback_messages={getErrorMessages().password_warnings}
+                                                >
+                                                    <PasswordInput
+                                                        autoComplete='trading_password'
+                                                        label={localize('Trading password')}
+                                                        error={touched.trading_password && errors.trading_password}
+                                                        name='trading_password'
+                                                        value={values.trading_password}
+                                                        onBlur={handleBlur}
+                                                        onChange={handleChange}
+                                                    />
+                                                </PasswordMeter>
+                                            </fieldset>
+                                            <fieldset className='account-form__fieldset account__trading-password-confirm'>
+                                                {/* <PasswordMeter
+                                            input={new_pw_input}
+                                            has_error={!!(touched.new_password && errors.new_password)}
+                                            custom_feedback_messages={getErrorMessages().password_warnings}
+                                        > */}
+                                                <PasswordInput
+                                                    autoComplete='confirm-trading-password'
+                                                    label={localize('Confirm Trading password')}
+                                                    error={
+                                                        touched.confirm_trading_password &&
+                                                        errors.confirm_trading_password
+                                                    }
+                                                    name='confirm_trading_password'
+                                                    value={values.confirm_trading_password}
+                                                    onBlur={handleBlur}
+                                                    onChange={e => {
+                                                        const input = e.target;
+                                                        setFieldTouched('confirm_trading_password', true);
+                                                        // if (input) this.updateNewPassword(input.value);
+                                                        handleChange(e);
+                                                    }}
+                                                />
+                                                {/* </PasswordMeter> */}
+                                            </fieldset>
+                                            <Button
+                                                className='account__trading-password-button'
+                                                type='submit'
+                                                is_disabled={
+                                                    isSubmitting ||
+                                                    !!(
+                                                        errors.new_password ||
+                                                        !values.new_password ||
+                                                        errors.old_password ||
+                                                        !values.old_password
+                                                    )
+                                                }
+                                                is_loading={is_btn_loading}
+                                                is_submit_success={is_submit_success}
+                                                has_effect
+                                                text={localize('Set trading password')}
+                                                primary
+                                            />
+                                        </div>
+                                    </div>
+                                </FormBody>
+                            )}
                         </form>
                     )}
                 </Formik>

@@ -341,7 +341,97 @@ $MIN_HEIGHT_FLOATING: calc(
     &__initial-loader {
         height: calc(100vh - 240px);
     }
-    &__password-wrapper {
+    &__deriv-password {
+        margin-bottom: 4.8rem;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 3rem;
+            grid-row-gap: 1rem;
+            align-content: start;
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &-links {
+            display: flex;
+            grid-row: 1;
+            grid-column: 2;
+            gap: 2rem;
+            align-items: center;
+        }
+        &-google {
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-normal);
+            font-size: var(--text-size-xs);
+            color: var(--text-prominent);
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+        &-unlink {
+            color: var(--brand-red-coral);
+            font-size: var(--text-size-xs);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        &-note {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &-apps-note {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        @include mobile {
+            margin-bottom: 1rem;
+        }
+    }
+    &__trading-password-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+        align-content: start;
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__deriv-password-apps {
+        grid-column: 1;
+        grid-row: 3;
+        display: flex;
+        gap: 1rem;
+    }
+    &__trading-password-note {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    &__trading-password-password {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        width: 100%;
+        max-width: 100%;
+    }
+    &__trading-password-confirm {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: end;
+        width: 100%;
+        max-width: 100%;
+    }
+    &__trading-password-button {
+        grid-column: 2;
+        grid-row: 3;
+        width: fit-content;
+        justify-self: end;
+    }
+    &__trading-password-subheader {
+        grid-column: 1 / -1;
+    }
+    &__password {
         & .account__scrollbars_container--grid-layout {
             @include mobile {
                 display: flex;
@@ -349,6 +439,14 @@ $MIN_HEIGHT_FLOATING: calc(
             }
         }
     }
+    // &__password-wrapper {
+    //     & .account__scrollbars_container--grid-layout {
+    //         @include mobile {
+    //             display: flex;
+    //             flex-direction: column;
+    //         }
+    //     }
+    // }
     &__text {
         @include typeface(--paragraph-left-normal-black, none);
         color: var(--text-general);
