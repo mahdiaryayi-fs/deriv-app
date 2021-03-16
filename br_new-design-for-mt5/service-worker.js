@@ -717,7 +717,7 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "url": "/br_new-design-for-mt5/js/core.main~components_src_components_l.0dfec681b22ba8d9e009.js",
     "revision": null
   }, {
-    "url": "/br_new-design-for-mt5/js/core.main~s.fb43fffc46b876e8e3cd.js",
+    "url": "/br_new-design-for-mt5/js/core.main~s.af7c5f8e881a210c517c.js",
     "revision": null
   }, {
     "url": "/br_new-design-for-mt5/js/core.reality-check-modal.9e8cfa7b2bde446f4384.js",
