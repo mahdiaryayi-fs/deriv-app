@@ -289,7 +289,7 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "revision": "0cb8c9c65c9adde7eec4f6f79e2f4076"
   }, {
     "url": "/br_new-design-for-mt5-production/js/asset-manifest.json",
-    "revision": "49667479e7aee73a7b980a4fa00bd006"
+    "revision": "fa8060c315827a40f12b7d097af8374a"
   }, {
     "url": "/br_new-design-for-mt5-production/js/bot/bot-web-ui.main.css",
     "revision": "69a7c9e45842a15a6cff9106a08ca38d"
@@ -666,7 +666,7 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "url": "/br_new-design-for-mt5-production/js/core.main~A.ef1cb89eccd680415462.js",
     "revision": null
   }, {
-    "url": "/br_new-design-for-mt5-production/js/core.main~App_C.bae176d7062375bfacaa.js",
+    "url": "/br_new-design-for-mt5-production/js/core.main~App_C.6627bfb0fd402654bdbf.js",
     "revision": null
   }, {
     "url": "/br_new-design-for-mt5-production/js/core.main~App_Components_E.507c66d33d741c7abd54.js",
@@ -675,7 +675,7 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "url": "/br_new-design-for-mt5-production/js/core.main~Se.8fe609186e2c2c01185d.js",
     "revision": null
   }, {
-    "url": "/br_new-design-for-mt5-production/js/core.main~Stores_b.40e71fb6cb2d4c22d212.js",
+    "url": "/br_new-design-for-mt5-production/js/core.main~Stores_b.f6bc4e52920be9131c3a.js",
     "revision": null
   }, {
     "url": "/br_new-design-for-mt5-production/js/core.main~Stores_m.be3813f8c536ebfb44bd.js",
@@ -711,13 +711,13 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "url": "/br_new-design-for-mt5-production/js/core.main~components_src_components_c.5f792176d188456262c8.js",
     "revision": null
   }, {
-    "url": "/br_new-design-for-mt5-production/js/core.main~components_src_components_ca.9b79cd75c2e8cf3fbceb.js",
+    "url": "/br_new-design-for-mt5-production/js/core.main~components_src_components_ca.88097364889a8b2e99b4.js",
     "revision": null
   }, {
     "url": "/br_new-design-for-mt5-production/js/core.main~components_src_components_l.0dfec681b22ba8d9e009.js",
     "revision": null
   }, {
-    "url": "/br_new-design-for-mt5-production/js/core.main~s.36a3b5ec2c0a4dfb6e33.js",
+    "url": "/br_new-design-for-mt5-production/js/core.main~s.d1b5337a94ad48f70229.js",
     "revision": null
   }, {
     "url": "/br_new-design-for-mt5-production/js/core.reality-check-modal.9e8cfa7b2bde446f4384.js",
@@ -894,8 +894,8 @@ define("./service-worker.js",['./workbox-972bde33'], function (workbox) { 'use s
     "url": "/br_new-design-for-mt5-production/js/trader.error-component.82cb227571aafb3ef745.js",
     "revision": "ff5de341c2df4cc31e731deb3a4d65d6"
   }, {
-    "url": "/br_new-design-for-mt5-production/js/trader.mt5.746938304b5fe5a8d303.js",
-    "revision": "b1155cee33c4e24428fd37f907da2958"
+    "url": "/br_new-design-for-mt5-production/js/trader.mt5.713f712bc2a3e08f8592.js",
+    "revision": "62711acecb5eb5304b1958c466e4b75b"
   }, {
     "url": "/br_new-design-for-mt5-production/js/trader.reports.8b42035a2c06926c796e.js",
     "revision": "3b374a1a6a73862f1bbd62884d179b12"
